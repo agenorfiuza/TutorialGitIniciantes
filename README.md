@@ -240,7 +240,9 @@ $ git status
 
 ```
 $ git add arquivo.txt
-$ git add . "para adicionar vários arquivos de uma só vez"
+$ git add . 
+
+<para adicionar vários arquivos de uma só vez>
 ```
 
 <h2 style="color : #2188db">
@@ -276,8 +278,13 @@ $ git commit -m "arquivo.txt modificado no paragrafo final"
 </p>
 
 ```
-$ git log "para sair da tela de log, basta digitar a letra q"
-$ git log --oneline "forma enxuta de exibição em uma linha"
+$ git log 
+
+<para sair da tela de log, basta digitar a letra q>
+
+$ git log --oneline 
+
+<forma enxuta de exibição em uma linha>
 ```
 
 <h2 style="color : #2188db">
@@ -293,9 +300,17 @@ $ git log --oneline "forma enxuta de exibição em uma linha"
 </p>
 
 ```
-$ git log --oneline "copia a id do commit"
-$ git checkout b804c3d "então retorna para este commit na linha do tempo"
-$ git checkout main "retorna para o último estágio que estava"
+$ git log --oneline 
+
+<copia a id do commit>
+
+$ git checkout b804c3d 
+
+<então retorna para este commit na linha do tempo>
+
+$ git checkout main 
+
+<retorna para o último estágio que estava>
 ```
 
 <p style="color : white; font-size : 18px;">
@@ -304,7 +319,10 @@ $ git checkout main "retorna para o último estágio que estava"
 
 ```
 $ git log --oneline
-$ git revert b804c3d "na tela que abrir digite :q"
+$ git revert b804c3d 
+
+<na tela que abrir digite :q>
+
 $ git log --oneline
 ```
 
@@ -315,7 +333,9 @@ $ git log --oneline
 ```
 $ git log --oneline
 $ git reset b804c3d --hard
-$ git log --oneline "vai exibir o histórico até o commit selecionado e apagar as outras mais novas"
+$ git log --oneline 
+
+<vai exibir o histórico até o commit selecionado e apagar as outras mais novas>
 ```
 
 <h2 style="color : #2188db">
@@ -339,7 +359,63 @@ $ git add . && git commit -m "arquivo.txt modificado no paragrafo final"
 </p>
 
 ```
-$ touch .gitignore "digite o nome do arquivo ou pasta. Ao utilizar o git add o arquivo ou pasta não irão ser visiveis ao git"
+$ touch .gitignore 
+
+<digite o nome do arquivo ou pasta. Ao utilizar o git add o arquivo ou pasta não irão ser visiveis ao git>
+
 $ git add .
 $ git commit -m "adicionado o .gitignore"
 ```
+
+<h2 style="color : #2188db">
+    COMO SABER A BRANCH OU LISTA DE BRANCH DO REPOSITÓRIO ATUAL?
+</h2>
+
+<p style="color : white; font-size : 18px;">
+    Este comando vai listar as branchs do repositório atual:
+</p>
+
+```
+$ git branch 
+```
+
+<h2 style="color : #2188db">
+    COMO CRIAR UMA BRANCH?
+</h2>
+
+<p style="color : white; font-size : 18px;">
+    Para criar uma nova branch a partir da atual (a branch atual pode ser vista listando as branch como visto na linha de comando anterior, sendo que a atual será exibida com um asterisco), basta digitar a linha de comando e o nome da nova branch:
+</p>
+
+```
+$ git branch teste
+```
+
+<h2 style="color : #2188db">
+    COMO MUDAR DE BRANCH?
+</h2>
+
+<p style="color : white; font-size : 18px;">
+    Para transitar entre as branchs, basta digitar a seguinte linha de comando e o nome da branch:
+</p>
+
+```
+$ git checkout teste
+```
+
+<h2 style="color : #2188db">
+    COMO DELETAR UMA BRANCH?
+</h2>
+
+<p style="color : white; font-size : 18px;">
+    Para deletar uma branch, basta digitar a seguinte linha de comando com o -d e o nome da branch.:
+</p>
+
+```
+$ git branch -d teste 
+
+<caso haja atualizações para fundir a branch ao original, o sistema não permitirá a exclusão. Mas caso vc queira excluir mesmo com as atualizações, basta digitar -D maiúsculo>
+
+$ git branch -D teste
+```
+
